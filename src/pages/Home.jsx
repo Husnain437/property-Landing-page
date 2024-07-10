@@ -3,21 +3,16 @@ import gsap from "gsap";
 import bgVideo from "../assets/videomgst.mp4";
 import AllModal from "../components/AllModal";
 
-
 const Home = () => {
+  const [open, setopen] = useState(false);
+  const [click, setClick] = useState(false);
+  const handleClick = () => {
+    setClick(true);
+  };
 
-  const [open, setopen] = useState(false)
-  const [click, setClick] =useState(false)
-  const handleClick=()=>{
-   
-    setClick(true)
-    
-  }
-
-  const handleVideoEnd=()=>{
-    setopen(true)
-  }
-  
+  const handleVideoEnd = () => {
+    setopen(true);
+  };
 
   useEffect(() => {
     var tl = gsap.timeline();
@@ -82,29 +77,39 @@ const Home = () => {
   }, []);
   return (
     <>
-    
       <div className="banner">
         <div className="banner-div">
-          <video autoPlay muted id="ban" className="banner-img" onEnded={handleVideoEnd} >
+          <video
+            autoPlay
+            muted
+            id="ban"
+            className="banner-img"
+            onEnded={handleVideoEnd}
+          >
             <source src={bgVideo} type="video/mp4" />
           </video>
           <div className="text xs:container container flex justify-between">
             <div>
               <div className=" left-text larg-font font_bold" id="tx">
-                OrnaVillas <br /> Living
+              We are<br />the Future
               </div>
               <div className="home-text font_medium" id="ht">
-                Lorem et tempor eu veniam enim. Commodo amet tempor eiusmod
-                nostrud. Labore anim minim aliqua minim tempor. Est velit aute
-                adipisicing proident tempor nostrud occaecat laborum et.
+                Find your dream home with our diverse property listings. Our
+                site offers everything from cozy apartments to luxurious
+                estates. Use our detailed descriptions, high-quality images, and
+                virtual tours to make informed decisions.
               </div>
             </div>
             <div>
-              <button className="btn1 font_medium" id="btns" onClick={handleClick}  >
-                Book your stay
+              <button
+                className="btn1 font_medium"
+                id="btns"
+                onClick={handleClick}
+              >
+                Apply Now
               </button>
               <div className="right-text larg-font t2 font_bold" id="t2">
-                Experiences
+                of Real Estate
               </div>
             </div>
           </div>

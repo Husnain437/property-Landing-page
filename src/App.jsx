@@ -9,6 +9,9 @@ import { useEffect, useState } from "react";
 import AllModal from "./components/AllModal";
 import StaticExample from "./components/Model";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Founder from "./components/Founder";
+import Trusted from "./components/Trusted";
+import Footer from "./components/Footer";
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
@@ -32,19 +35,25 @@ function App() {
       
     <div>
       {/* <StaticExample/> */}
-        <div className="navbar1" id="nav">
+        {/* <div className="navbar1" id="nav">
           <Navbar color={navbarColor} display={display} />
-        </div>
+        </div> */}
         <div>
           <Home />
         </div>
         <div id="line1">
           <LineAnimation />
         </div>
+        <div>
+          <Founder/>
+        </div>
+          <Trusted/>
+        
         <div className="grid_animation">
           <GridAnimation />
         </div>
-                                               
+      
+        <Footer/>                              
     </div>
   );
 }

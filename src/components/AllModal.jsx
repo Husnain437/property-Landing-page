@@ -23,14 +23,16 @@ export default function AllModal({isOpen, click}) {
   // const history = useHistory();
 
   useEffect(() => {
+    setShowModal(isOpen);
     if(click){
       SetendViderFalse(true);
       setShowModal(false);
       setShowModal2(true);
-    }
-    setShowModal(isOpen);
-    
-  }, [click]);
+    } 
+  }, [isOpen,click]);
+ 
+  
+
   const fomrm_1 = {
     name: "",
     middlename: "",
@@ -188,9 +190,9 @@ export default function AllModal({isOpen, click}) {
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
-        <Modal.Body className="bg_secondary radius_10">
+        <Modal.Body className="radius_10 ">
           <div className="onboard_modal_sginup ">
-            <h1 className="text-center text_white font_semibold fs_30">
+            <h1 className="text-center font_semibold fs_30">
               Personal Details
             </h1>
             <p className="text-center text_white font_regular">
@@ -213,27 +215,27 @@ export default function AllModal({isOpen, click}) {
                 handleSubmit,
               }) => (
                 <form onSubmit={handleSubmit}>
-                  <p className="font_semibold text_white mb-2">Name</p>
+                  {/* <p className="font_semibold text_white mb-2">Name</p> */}
                   <input
                     id="name"
                     name="name"
                     type="text"
-                    placeholder=""
+                    placeholder="Name"
                     onChange={handleChange}
                     value={values.name}
-                    className="input_felid"
+                    className="input_felid "
                   />
                   {touched.name && errors.name && (
                     <div className="text_red fs_12 font_regular mt-2 mb-2">
                       {errors.name}
                     </div>
                   )}
-                  <p className="font_semibold text_white mb-2 mt-2">Middle Name</p>
+                  {/* <p className="font_semibold text_white mb-2 mt-2">Middle Name</p> */}
                   <input
-                    className="input_felid"
+                    className="input_felid "
                     id="middlename"
                     name="middlename"
-                    placeholder=""
+                    placeholder="Middle Name"
                     type="text"
                     onChange={handleChange}
                     value={values.middlename}
@@ -244,15 +246,15 @@ export default function AllModal({isOpen, click}) {
                     </div>
                   )}
 
-                  <p className="font_semibold text_white mb-2 mt-2">Nationality </p>
+                  {/* <p className="font_semibold text_white mb-2 mt-2">Nationality </p> */}
                   <input
                     id="nationality"
                     name="nationality"
-                    placeholder=""
+                    placeholder="Nationality"
                     type="text"
                     onChange={handleChange}
                     value={values.nationality}
-                    className="input_felid"
+                    className="input_felid "
                   />
 
                   {touched.nationality && errors.nationality && (
@@ -261,15 +263,15 @@ export default function AllModal({isOpen, click}) {
                     </div>
                   )}
 
-                  <p className="font_semibold text_white mb-2 mt-2">Company</p>
+                  {/* <p className="font_semibold text_white mb-2 mt-2">Company</p> */}
                   <input
                     id="company"
                     name="company"
                     type="text"
-                    placeholder=""
+                    placeholder="Company"
                     onChange={handleChange}
                     value={values.company}
-                    className="input_felid"
+                    className="input_felid "
                   />
                   {touched.company && errors.company && (
                     <div className="text_red fs_12 font_regular mt-2 mb-2">
@@ -386,15 +388,15 @@ export default function AllModal({isOpen, click}) {
                 handleSubmit,
               }) => (
                 <form onSubmit={handleSubmit}>
-                  <p className="font_semibold text_white mb-2">Email</p>
+                  {/* <p className="font_semibold text_white mb-2">Email</p> */}
                   <input
                     id="email"
                     name="email"
                     type="text"
-                    placeholder=""
+                    placeholder="Email"
                     onChange={handleChange}
                     value={values.email}
-                    className="input_felid"
+                    className="input_felid "
                   />
 
                   {touched.email && errors.email && (
@@ -403,13 +405,13 @@ export default function AllModal({isOpen, click}) {
                     </div>
                   )}
 
-                  <p className="font_semibold text_white mb-2 mt-2">Phone number</p>
+                  {/* <p className="font_semibold text_white mb-2 mt-2">Phone number</p> */}
                   <input
-                    className="input_felid"
+                    className="input_felid "
                     id="phone"
                     name="phone"
                     type="text"
-                    placeholder=""
+                    placeholder="+92-1234567"
                     onChange={handleChange}
                     value={values.phone}
                   />
@@ -419,15 +421,15 @@ export default function AllModal({isOpen, click}) {
                     </div>
                   )}
 
-                  <p className="font_semibold text_white mb-2 mt-2">Linkdin url </p>
+                  {/* <p className="font_semibold text_white mb-2 mt-2">Linkdin url </p> */}
                   <input
                     id="linkdin"
                     name="linkdin"
                     type="text"
-                    placeholder=""
+                    placeholder="LinkedIn Url"
                     onChange={handleChange}
                     value={values.linkdin}
-                    className="input_felid"
+                    className="input_felid "
                   />
                   {touched.linkdin && errors.linkdin && (
                     <div className="text_red fs_12 font_regular mt-2 mb-2">
@@ -435,15 +437,15 @@ export default function AllModal({isOpen, click}) {
                     </div>
                   )}
 
-                  <p className="font_semibold text_white mb-2 mt-2">Twitter url </p>
+                  {/* <p className="font_semibold text_white mb-2 mt-2">Twitter url </p> */}
                   <input
                     id="twitter"
                     name="twitter"
                     type="text"
-                    placeholder=""
+                    placeholder="Twitter Url"
                     onChange={handleChange}
                     value={values.twitter}
-                    className="input_felid"
+                    className="input_felid "
                   />
                   {touched.twitter && errors.twitter && (
                     <div className="text_red fs_12 font_regular mt-2 mb-2">
@@ -451,15 +453,15 @@ export default function AllModal({isOpen, click}) {
                     </div>
                   )}
 
-                  <p className="font_semibold text_white mb-2 mt-2">Facebook url</p>
+                  {/* <p className="font_semibold text_white mb-2 mt-2">Facebook url</p> */}
                   <input
                     id="facebook"
                     name="facebook"
                     type="text"
-                    placeholder=""
+                    placeholder="FaceBook Url"
                     onChange={handleChange}
                     value={values.facebook}
-                    className="input_felid"
+                    className="input_felid "
                   />
                   {touched.facebook && errors.facebook && (
                     <div className="text_red fs_12 font_regular mt-2 mb-2">
@@ -467,17 +469,17 @@ export default function AllModal({isOpen, click}) {
                     </div>
                   )}
 
-                  <p className="font_semibold text_white mb-2 mt-2">
+                  {/* <p className="font_semibold text_white mb-2 mt-2">
                     Where is the company located
-                  </p>
+                  </p> */}
                   <input
                     id="located"
                     name="located"
                     type="text"
-                    placeholder=""
+                    placeholder="Location"
                     onChange={handleChange}
                     value={values.located}
-                    className="input_felid"
+                    className="input_felid "
                   />
 
                   {touched.located && errors.located && (
@@ -504,8 +506,9 @@ export default function AllModal({isOpen, click}) {
         onHide={() => setQuestionmodal(false)}
         aria-labelledby="contained-modal-title-vcenter"
         centered
+        className="abc"
       >
-        <Modal.Body className="bg_secondary radius_10">
+        <Modal.Body>
           <div className="onboard_modal_sginup ">
             <Formik
               initialValues={fomrm_3}
@@ -533,7 +536,7 @@ export default function AllModal({isOpen, click}) {
                     placeholder=""
                     onChange={handleChange}
                     value={values.why}
-                    className="input_felid"
+                    className="input_felid "
                     style={{ height: 97 }}
                   />
 
@@ -573,7 +576,10 @@ export default function AllModal({isOpen, click}) {
           </p>
           <Button
             className="m_0 text_white font_regular modal_btn "
-            onClick={() => navigation("/dashboard")}
+            onClick={() => {
+              navigation("/")
+              setShowModal3(false)
+            }}
           >
             Click here!
           </Button>

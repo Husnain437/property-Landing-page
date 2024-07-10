@@ -9,12 +9,10 @@ gsap.registerPlugin(ScrollTrigger);
 const LineAnimation = () => {
   const [listingdata, setlistingdata] = useState([]);
   const imge_url = "https://locatestudent.com/magst/upload/";
- 
 
   const legRef = useRef(null);
   const imageRef = useRef(null);
   const [index, setIndex] = useState(0);
-
 
   useEffect(() => {
     const data = {
@@ -118,7 +116,7 @@ const LineAnimation = () => {
       tl.kill();
     };
   }, [listingdata.length]);
-  console.log(listingdata[index]?.image, "im img");
+  // console.log(listingdata, "im img");
 
   return (
     <div className="main-mid">
@@ -131,11 +129,11 @@ const LineAnimation = () => {
             <div className="clock" ref={imageRef}>
               <div className="leg" ref={legRef}></div>
               <div className="circle"></div>
-              <img
-                src={imge_url + listingdata[index]?.image}
-                className="image"
-                alt="clock segment"
-              />
+                <img
+                  src={imge_url + listingdata[index]?.image}
+                  className="image"
+                  alt="clock segment"
+                />
             </div>
             <div className="loc font_bold" id="location">
               {listingdata[index]?.title}
