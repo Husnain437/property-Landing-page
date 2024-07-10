@@ -386,6 +386,9 @@
   .home-text{
     top: 50%;
   }
+  .right-text{
+    top: 40%;
+  }
 }
 @media (max-width: 1600px) {
   .left-text {
@@ -395,19 +398,26 @@
     top: 65%;
   }
   .btn1 {
-    top: 55%;
+    top: 50%;
+  }
+  .right-text{
+    top: 35%;
   }
 }
 
 @media (max-width: 1200px) {
   .left-text {
-    top: 0%;
+    top: 10%;
   }
   .home-text{
-    top: 80%;
+    top: 70%;
+    width: 50%;
   }
   .btn1 {
-    top: 52%;
+    top: 45%;
+  }
+  .right-text{
+    top: 35%;
   }
  
 }
@@ -419,7 +429,7 @@
   }
 
   .right-text {
-    top: 25%;
+    top: 30%;
   }
   .home-text {
     top: 75%;
@@ -446,7 +456,7 @@
     justify-content: center;
   }
   .home-text {
-    top: 70%;
+    top: 60%;
     width: 80%;
   }
 }
@@ -476,7 +486,7 @@
     flex-direction: column;
   }
   .home-text {
-    top: 75%;
+    top: 65%;
     width: 85%;
   }
   .right-text{
