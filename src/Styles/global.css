@@ -306,11 +306,11 @@
   font-size: 1rem;
   border-radius: 5px;
   border: none;
-  position: relative;
+  position: absolute;
   background-color: var(--white);
   right: 0;
   top: 50%;
-  z-index: 999;
+  
 }
 .btn2 {
   width: 200px;
@@ -376,26 +376,54 @@
 .des {
   font-size: 1rem;
 }
-
-@media (max-width: 1200px) {
+@media (max-width: 2400px) {
   .left-text {
     top: 10%;
   }
   .btn1 {
+    top: 55%;
+  }
+  .home-text{
     top: 50%;
   }
 }
+@media (max-width: 1600px) {
+  .left-text {
+    top: 8%;
+  }
+  .home-text{
+    top: 65%;
+  }
+  .btn1 {
+    top: 53%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .left-text {
+    top: 0%;
+  }
+  .home-text{
+    top: 80%;
+  }
+  .btn1 {
+    top: 52%;
+  }
+ 
+}
+
 
 @media (max-width: 960px) {
   .middle_animations {
     justify-content: center;
   }
-  .home-text {
-    top: 80%;
-    width: 50%;
-  }
+
   .right-text {
-    top: 23%;
+    top: 25%;
+  }
+  .home-text {
+    top: 75%;
+    width: 80%;
   }
 }
 
@@ -406,6 +434,9 @@
   .right-text {
     top: 25%;
   }
+  .left-text{
+    top:20%
+  }
   .btn1 {
     top: 50%;
     width: 150px !important;
@@ -415,7 +446,7 @@
     justify-content: center;
   }
   .home-text {
-    top: 80%;
+    top: 70%;
     width: 80%;
   }
 }
@@ -425,13 +456,13 @@
     font-size: 2rem;
   }
   .left-text {
-    top: 1%;
+    top: 10%;
   }
   .right-text {
     top: 15%;
   }
   .btn1 {
-    top: 25%;
+    top: 50%;
     width: 100px !important;
   }
   .banner {
@@ -445,8 +476,11 @@
     flex-direction: column;
   }
   .home-text {
-    top: 60%;
+    top: 75%;
     width: 85%;
+  }
+  .right-text{
+    top:25%
   }
 }
 

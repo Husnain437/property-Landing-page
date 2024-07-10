@@ -100,7 +100,7 @@ const Home = () => {
                 virtual tours to make informed decisions.
               </div>
             </div>
-            <div>
+            <div >
               <button
                 className="btn1 font_medium"
                 id="btns"
@@ -113,6 +113,7 @@ const Home = () => {
               </div>
             </div>
           </div>
+          
         </div>
         <AllModal isOpen={open} click={click} />
       </div>
