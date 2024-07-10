@@ -239,6 +239,7 @@ const LineAnimation = () => {
       ease: "linear",
       scale: 0,
       opacity: 0,
+      delay:1,
       onComplete: () => {
         setIndex((prevIndex) => (prevIndex + 1) % arrLength);
       },
